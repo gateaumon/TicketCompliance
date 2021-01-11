@@ -18,12 +18,11 @@ def main():
 
     dataset = Dataset(**params['data'])
 
-    #clf = ClassifierWrapper(**params['clf'])
-    clf = ClassifierWrapper('gbc.joblib')
-    #clf.fit(dataset.get_xtrain(), dataset.get_ytrain())
-    #clf.display_results()
-    #clf.display_best_params()
-    #clf.save_model('gbc.joblib')
+    clf = ClassifierWrapper(**params['clf'])
+    clf.fit(dataset.get_xtrain(), dataset.get_ytrain())
+    clf.display_results()
+    clf.display_best_params()
+    clf.save_model('gbc.joblib')
     clf.predict_proba(dataset.get_xtest())
 
 
