@@ -1,0 +1,12 @@
+{
+	"data": {"train_file": "data/train.csv", 
+			"test_file": "data/test.csv", 
+			"feature_names": ["fine_amount", "late_fee", "discount_amount", "judgment_amount", "disposition"],
+		    "locations": {"address_file": "data/addresses.csv", 
+		    			  "latlon_file": "data/latlons.csv"},
+		    "dispositions": true},
+	"clf": {"param_grid": {"learning_rate": [0.2, 0.1, 0.01], 
+						   "n_estimators": [50, 100, 150], 
+						   "max_depth": [2, 3, 4]},
+			"scoring": "roc_auc"}
+}
